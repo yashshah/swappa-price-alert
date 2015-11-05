@@ -1,5 +1,5 @@
 # swappa-price-alert
-I wanted to buy an iPhone from the Swappa. Till the time, I check my mails for new listing, all the good phones were already gone. So I created a mac notifier which will notify me as soon as new listing is posted on Swappa. It also tells me the price - so that I can act accordingly.
+I wanted to buy an iPhone from the Swappa. Most of the good phones were sold out by the time I used to check mails. So I created a mac notifier which will notify me as soon as new listing is posted on Swappa. It also tells me the price - so that I can act accordingly. I also added the condition for the listing to be shown only when it is under my price range.
 
 ##Installation
 
