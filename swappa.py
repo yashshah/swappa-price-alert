@@ -43,7 +43,7 @@ def listing_post(listings):
         listing_data += ['http://swappa.com'+listing.xpath('@data-url')[0]]
         listing_dict = {}
         listing_dict = dict(zip(categories, listing_data))
-        if not any(d[2] == listing_dict['listing_id'] for d in iphone_list):
+        if not any(d[-1] == listing_dict['link'] for d in iphone_list):
             notify(listing_dict)
         new_iphones_fetched.append(listing_data)
 
@@ -53,4 +53,4 @@ if __name__ == '__main__':
     while True:
         listings = retrieve_page()
         listing_post(listings)
-        sleep(randint(1,120))
+        sleep(randint(100,200))
