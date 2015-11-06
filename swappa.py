@@ -33,7 +33,7 @@ def retrieve_page():
 
 def listing_post(listings):
     global iphone_list
-    new_iphones_fetch = []
+    new_iphones_fetched = []
     categories = ['price','condition','listing_id','storage','color',
         'unknown','seller','location','country','description','link']
     for listing in listings:
@@ -45,9 +45,9 @@ def listing_post(listings):
         listing_dict = dict(zip(categories, listing_data))
         if not any(d[2] == listing_dict['listing_id'] for d in iphone_list):
             notify(listing_dict)
-        new_iphones_fetch.append(listing_data)
+        new_iphones_fetched.append(listing_data)
 
-    iphone_list = new_iphones_fetch
+    iphone_list = new_iphones_fetched
 
 if __name__ == '__main__':
     while True:
